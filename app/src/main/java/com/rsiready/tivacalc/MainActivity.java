@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +30,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Detects Screen size
+        int bigScreen;
+        /********************************************************************************************
+         Needs Sorting
+         *******************************************************************************************/
+
+        // Sets Up Height Spinner
+        Spinner heightSpinner = (Spinner) findViewById(R.id.spinnerHeight);
+
+        // Loads AdView
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
