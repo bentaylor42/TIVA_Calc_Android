@@ -1,5 +1,6 @@
 package com.rsiready.tivacalc;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,13 +34,32 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Detects Screen size
-        int bigScreen;
-        /********************************************************************************************
-         Needs Sorting
-         *******************************************************************************************/
+        int bigScreen = 0;
+        int screenSize = getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK;
+        switch (screenSize){
+            case Configuration.SCREENLAYOUT_SIZE_LARGE:
+                bigScreen = 1;
+                break;
+
+            case Configuration.SCREENLAYOUT_SIZE_XLARGE:
+                bigScreen = 1;
+                break;
+        }
 
         // Sets Up Height Spinner
-        Spinner heightSpinner = (Spinner) findViewById(R.id.spinnerHeight);
+        if (bigScreen == 0){
+            Spinner heightSpinner = (Spinner) findViewById(R.id.spinnerHeight);
+            ArrayAdapter<CharSequence> heightAdapter = ArrayAdapter.createFromResource(this, R.array.height_array_abbrev, android.R.layout.simple_spinner_item);
+            heightAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            heightSpinner.setAdapter(heightAdapter);
+        }
+        else{
+            Spinner heightSpinner = (Spinner) findViewById(R.id.spinnerHeight);
+            ArrayAdapter<CharSequence> heightAdapter = ArrayAdapter.createFromResource(this, R.array.height_array_full, android.R.layout.simple_spinner_item);
+            heightAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            heightSpinner.setAdapter(heightAdapter);
+        }
+
 
         // Loads AdView
         AdView mAdView = (AdView) findViewById(R.id.adView);
@@ -50,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+
+        /********************************************************************************************
+         Needs Sorting
+         *******************************************************************************************/
     }
 
     @Override
@@ -65,5 +91,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+
+        /********************************************************************************************
+         Needs Sorting
+         *******************************************************************************************/
     }
 }
+
+
+/*************************************** END OF CODE **********************************************/

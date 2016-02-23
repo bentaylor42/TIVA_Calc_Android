@@ -2,8 +2,12 @@
     <string name="app_name">TIVA Calc</string>
     <string name="action_settings">Settings</string>
     <string name="banner_ad_unit_id">ca-app-pub-3071841906959757/9176946029</string>
+    
     <string name="reset">Reset</string>
-    <string name="settings">Settings</string>
+
+    <string name="feet">Feet</string>
+    <string name="inches">Inches</string>
+    <string name="cm">Centimetres</string>
 
     <string-array name="height_array_full">
         <item>Feet/ Inches</item>
