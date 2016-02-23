@@ -86,9 +86,164 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:id="@+id/spinnerHeight"
-                android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/textFieldInches"
                 android:layout_toRightOf="@+id/textFieldInches" />
+
+            <TextView
+                android:id="@+id/cmDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerHeight"
+                android:text="cmDisplay"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="#FF0000"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/ftInDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cmDisplay"
+                android:text="Ft/ In Display"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="#FF0000"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+            <EditText
+                android:id="@+id/textFieldStones"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/ftInDisplay"
+                android:hint="@string/stones"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/textFieldUKPounds"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:layout_toRightOf="@id/textFieldStones"
+                android:layout_toEndOf="@id/textFieldStones"
+                android:layout_below="@id/ftInDisplay"
+                android:hint="@string/lbs"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/textFieldUSPounds"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/ftInDisplay"
+                android:hint="@string/lbs"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                android:focusable="false"/>
+
+            <EditText
+                android:id="@+id/textFieldKilograms"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/ftInDisplay"
+                android:hint="@string/kg"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                android:focusable="false"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/spinnerWeight"
+                android:layout_toEndOf="@+id/textFieldKilograms"
+                android:layout_toRightOf="@+id/textFieldKilograms"
+                android:layout_alignTop="@id/textFieldStones"/>
+
+            <TextView
+                android:id="@+id/kgDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerWeight"
+                android:text="Kilograms Display"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="#FF0000"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/lbsDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kgDisplay"
+                android:text="US Pounds Display"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="#FF0000"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/stLbsDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbsDisplay"
+                android:text="Stones/ Pounds Display"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="#FF0000"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+            <EditText
+                android:id="@+id/textFieldDays"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/stLbsDisplay"
+                android:hint="@string/day"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/textFieldMonths"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:layout_toEndOf="@id/textFieldDays"
+                android:layout_toRightOf="@id/textFieldDays"
+                android:layout_alignTop="@id/textFieldDays"
+                android:hint="@string/month"/>
+
+            <EditText
+                android:id="@+id/textFieldYears"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:layout_toEndOf="@id/textFieldMonths"
+                android:layout_toRightOf="@id/textFieldMonths"
+                android:layout_alignTop="@id/textFieldMonths"
+                android:hint="@string/year"/>
 
         </RelativeLayout>
 

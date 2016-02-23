@@ -9,6 +9,14 @@
     <string name="inches">Inches</string>
     <string name="cm">Centimetres</string>
 
+    <string name="stones">Stones</string>
+    <string name="lbs">Pounds</string>
+    <string name="kg">Kilograms</string>
+
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+
     <string-array name="height_array_full">
         <item>Feet/ Inches</item>
         <item>Centimetres</item>
@@ -17,6 +25,18 @@
     <string-array name="height_array_abbrev">
         <item>Ft/ In</item>
         <item>Cm</item>
+    </string-array>
+
+    <string-array name="weight_array_full">
+        <item>Stones/ Pounds</item>
+        <item>Pounds</item>
+        <item>Kilograms</item>
+    </string-array>
+
+    <string-array name="weight_array_abbrev">
+        <item>St/ Lbs</item>
+        <item>Lbs</item>
+        <item>Kg</item>
     </string-array>
 
 </resources>
