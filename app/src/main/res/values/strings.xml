@@ -5,6 +5,8 @@
     
     <string name="reset">Reset</string>
 
+    <string name="appTitle">TIVA Calculator</string>
+
     <string name="feet">Feet</string>
     <string name="inches">Inches</string>
     <string name="cm">Centimetres</string>
