@@ -12,9 +12,6 @@ import android.view.MenuItem;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -44,20 +41,6 @@ public class MainActivity extends AppCompatActivity {
             case Configuration.SCREENLAYOUT_SIZE_XLARGE:
                 bigScreen = 1;
                 break;
-        }
-
-        // Sets Up Height Spinner
-        if (bigScreen == 0){
-            Spinner heightSpinner = (Spinner) findViewById(R.id.spinnerHeight);
-            ArrayAdapter<CharSequence> heightAdapter = ArrayAdapter.createFromResource(this, R.array.height_array_abbrev, android.R.layout.simple_spinner_item);
-            heightAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            heightSpinner.setAdapter(heightAdapter);
-        }
-        else{
-            Spinner heightSpinner = (Spinner) findViewById(R.id.spinnerHeight);
-            ArrayAdapter<CharSequence> heightAdapter = ArrayAdapter.createFromResource(this, R.array.height_array_full, android.R.layout.simple_spinner_item);
-            heightAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            heightSpinner.setAdapter(heightAdapter);
         }
 
 

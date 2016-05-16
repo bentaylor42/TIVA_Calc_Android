@@ -19,6 +19,23 @@
     <string name="month">Month</string>
     <string name="year">Year</string>
 
+    <string name="drugCalc">Drug Calculator</string>
+    <string name="heightCalc">Height Calculator</string>
+    <string name="weightCalc">Weight Calculator</string>
+    <string name="gender">Gender</string>
+    <string name="ageCalc">Age Calculator</string>
+    <string name="calcVals">Calculated Values</string>
+    <string name="vol">Volume</string>
+    <string name="total">Total</string>
+    <string name="conc">Conc.</string>
+    <string name="ml">ml.</string>
+    <string name="equals">=</string>
+    <string name="micrograms">mcg</string>
+    <string name="milligrams">mg</string>
+    <string name="microgml">mcg/ ml</string>
+    <string name="resetButtonAltText">resetButton</string>
+    <string name="settingsButtonAltText">settingsButton</string>
+
     <string-array name="height_array_full">
         <item>Feet/ Inches</item>
         <item>Centimetres</item>

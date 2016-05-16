@@ -13,7 +13,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.rsiready.tivacalc.MainActivity"
     tools:showIn="@layout/activity_main"
-    android:background="#c5eff7">
+    android:background="#c0e4e8">
 
     <LinearLayout
         android:orientation="vertical"
@@ -33,7 +33,8 @@
                 android:src="@drawable/ic_refresh"
                 android:background="#00ffffff"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"/>
+                android:layout_alignParentLeft="true"
+                android:contentDescription="@string/resetButtonAltText" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -45,10 +46,10 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:textStyle="bold"
-                android:layout_toStartOf="@id/imageButton2"
-                android:layout_toLeftOf="@id/imageButton2"
-                android:layout_toEndOf="@id/resetButton"
-                android:layout_toRightOf="@id/resetButton"
+                android:layout_toStartOf="@+id/imageButton2"
+                android:layout_toLeftOf="@+id/imageButton2"
+                android:layout_toEndOf="@+id/resetButton"
+                android:layout_toRightOf="@+id/resetButton"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:textAlignment="center"/>
@@ -60,15 +61,14 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/ic_settings"
-                android:background="#00ffffff" />
+                android:background="#00ffffff"
+                android:contentDescription="@string/settingsButtonAltText" />
         </RelativeLayout>
 
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
             ads:adSize="BANNER"
             ads:adUnitId="@string/banner_ad_unit_id"
             android:layout_gravity="center_horizontal"
@@ -77,14 +77,221 @@
         </com.google.android.gms.ads.AdView>
 
         <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:id="@+id/scrollView" >
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></LinearLayout>
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:id="@+id/DrugCalc"
+                    android:background="#979797">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/drugCalc"
+                        android:id="@+id/textView2"
+                        android:textColor="#000000" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F0F8FF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp">
+
+                            <EditText
+                                android:layout_width="0dp"
+                                android:layout_weight="0.3"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/textFieldConc"
+                                android:hint="@string/conc"
+                                android:gravity="center_horizontal" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/equals"
+                                android:id="@+id/textView8"
+                                android:gravity="center_horizontal" />
+
+                            <EditText
+                                android:layout_width="0dp"
+                                android:layout_weight="0.3"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/textFieldTotal"
+                                android:gravity="center_horizontal"
+                                android:hint="@string/total" />
+
+                            <EditText
+                                android:layout_width="0dp"
+                                android:layout_weight="0.3"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/textFieldVol"
+                                android:gravity="center_horizontal"
+                                android:hint="@string/vol" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_weight="0.3"
+                                android:layout_height="wrap_content"
+                                android:text="@string/microgml"
+                                android:id="@+id/btnConc" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/equals"
+                                android:id="@+id/textView9"
+                                android:gravity="center_horizontal" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_weight="0.3"
+                                android:layout_height="wrap_content"
+                                android:text="@string/milligrams"
+                                android:id="@+id/btnVol" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.3"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ml"
+                                android:id="@+id/textView10"
+                                android:gravity="center_horizontal" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:id="@+id/HeightCalc"
+                    android:background="#979797">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/heightCalc"
+                        android:id="@+id/textView3"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:id="@+id/WeightCalc"
+                    android:background="#979797">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weightCalc"
+                        android:id="@+id/textView4"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:id="@+id/GenderEntry"
+                    android:background="#979797">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gender"
+                        android:id="@+id/textView5"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:id="@+id/AgeCalc"
+                    android:background="#979797">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ageCalc"
+                        android:id="@+id/textView6"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:id="@+id/CalcValues"
+                    android:background="#979797">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calcVals"
+                        android:id="@+id/textView7"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
         </ScrollView>
 
     </LinearLayout>
